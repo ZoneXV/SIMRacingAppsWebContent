@@ -26,7 +26,7 @@
     <property name="version" value="${version.major}.${version.minor}_Build_${version.build}" />
     <echo message="Server Version: ${version}" />
     
-    <property name="jsdoc" location="node_modules/angular-jsdoc/node_modules/.bin/jsdoc.cmd" />
+    <property name="jsdoc" location="node_modules/.bin/jsdoc.cmd" />
     
     <target name="_javascriptdoc">
         <sequential>
@@ -92,7 +92,7 @@
             <fileset dir="${javascriptdoc.location}" includes="index.html" />
         </replaceregexp>
     </target>
-    <target name="jar" description="Bundles the application as a JAR file" depends="javascriptdoc">
+    <target name="jar" description="Bundles the application as a JAR file">
         <sequential>
             <property file="${version.properties}" prefix="version" />
             <property name="version" value="${version.major}.${version.minor}_Build_${version.build}" />
