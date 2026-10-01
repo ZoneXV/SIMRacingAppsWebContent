@@ -1,0 +1,12 @@
+{
+"doc": "JavaScriptDoc/sra-car-number.html",
+"name": "CarNumberZ15",
+"description": "Car Number using Colors from the SIM",
+"description-de": "Fahrzeug-Nummer mit Farben aus der SIM",
+"description-es": "Car Number using Colors from the SIM",
+"url": "apps/WidgetLoader?widget=CarNumberZ15&",
+"icon": "widgets/CarNumberZ15/icon.png",
+"width": 800,
+"height": 480,
+"args": ""
+}

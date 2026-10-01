@@ -1,0 +1,125 @@
+<div class="SIMRacingApps-Widget-CarNumber" ng-attr-style="position: relative; height: {{height}}px; visibility: {{CarNumber ? 'inherit' : 'hidden'}}">
+
+    <svg version="1.1"
+         xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         class="SIMRacingApps-Widgets-CarNumber-svg"
+         viewBox="0 0 800 480">
+
+        <defs>
+            <linearGradient id="numberGradient">
+                <stop offset="0%"   stop-color="#2f2f2f"/>
+                <stop offset="12%"  stop-color="#2f2f2f"/>
+                <stop offset="100%" stop-color="#4d4d4d"/>
+            </linearGradient>
+            <!-- TINT EXPERIMENT (disabled) - to re-enable the per-car color tint,
+                 comment out the static gradient above and uncomment this block.
+                 Also see CarNumberZ15.js for the matching sraTint filter and
+                 gradientId scope var, which are commented out there too.
+
+            <linearGradient ng-attr-id="{{gradientId}}">
+                <stop offset="0%"   ng-attr-stop-color="{{CarColor|sraRGB|sraTint:0.45}}"/>
+                <stop offset="12%"  ng-attr-stop-color="{{CarColor|sraRGB|sraTint:0.45}}"/>
+                <stop offset="100%" ng-attr-stop-color="{{CarColor|sraRGB|sraTint:0.1}}"/>
+            </linearGradient>
+            -->
+			<filter id="dropShadow">
+                <feDropShadow
+                dx="12"
+                dy="12"
+                stdDeviation="0"
+                flood-color="black"
+                flood-opacity="1"/>
+            </filter>
+			 <clipPath id="round-corner">
+            <rect x="0" y="-3" width="800" height="491" rx="60" ry="60"/>
+         </clipPath>
+        </defs>
+
+
+        <!-- Main badge background -->
+        
+		<rect
+		clip-path="url(#round-corner)"
+        x="0"
+        y="-3"
+        width="800"
+        height="491"
+        rx="0"
+        ry="0"
+        fill="url(#numberGradient)">
+        </rect>
+		
+        <!-- TINT EXPERIMENT (disabled) - matching dynamic fill, re-enable together with
+             the gradient block above:
+        <rect
+        clip-path="url(#round-corner)"
+        x="0"
+        y="-3"
+        width="800"
+        height="491"
+        rx="0"
+        ry="0"
+        ng-attr-fill="url(#{{gradientId}})">
+        </rect>
+        -->
+		
+				<!-- Stripe shadow
+        <rect
+        x="90"
+        y="0"
+        width="12"
+        height="491"
+        fill="#000000"
+        opacity="0.5">
+        </rect>
+		
+		-->
+
+        <!-- Color stripe -->
+        <rect
+		    clip-path="url(#round-corner)"
+            x="0"
+            y="-3"
+            width="100"
+            height="491"
+            ng-attr-fill="{{CarColor|sraRGB}}">
+        </rect>
+<!-- Normal numbers (1-2 digits) -->
+        <text ng-if="('' + data.Car[value].Number.Value).length < 3"
+              class="SIMRacingApps-Widget-CarNumber-text"
+              x="425"
+              y="390"
+              font-size="455"
+			  letter-spacing="10"
+              text-anchor="middle"
+	          filter="url(#dropShadow)"
+              font-family="Rajdhani"
+              font-style="italic"
+              stroke="black"
+			  stroke-width="45"
+              fill="white"
+              ng-bind="data.Car[value].Number.Value">
+</text>
+
+<!-- Triple digit numbers -->
+        <text ng-if="('' + data.Car[value].Number.Value).length >= 3"
+              class="SIMRacingApps-Widget-CarNumber-text"
+              x="425"
+              y="390"
+              font-size="455"
+			  letter-spacing="10"
+			  text-anchor="middle"		  
+	          filter="url(#dropShadow)"
+              font-family="Rajdhani"
+              font-style="italic"
+              textLength="590"
+              lengthAdjust="spacingAndGlyphs"
+              stroke="black"
+              fill="white"
+              ng-bind="data.Car[value].Number.Value">
+        </text>		
+
+    </svg>
+
+</div>

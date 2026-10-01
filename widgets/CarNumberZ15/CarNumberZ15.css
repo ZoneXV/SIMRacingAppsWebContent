@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap');
+
+.SIMRacingApps-Widget-CarNumber {
+    width: 100%;
+    height: 100%;
+    font-weight:   600;
+    stroke-width:  35px;
+	paint-order: stroke fill;
+}
+
+.SIMRacingApps-Widgets-CarNumber-svg {
+    z-index: 1;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+}
+.SIMRacingApps-Widget-CarNumber-background {
+    /* opacity:    .8; */
+}
+.SIMRacingApps-Widget-CarNumber-text {
+	font-weight: bold;
+}
+.SIMRacingApps-Widget-CarNumber-text-background {
+}
+
+.SIMRacingApps-Widget-CarNumber-slant-normal {
+
+}
+
+.SIMRacingApps-Widget-CarNumber-image {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-size:    cover;
+    background-repeat:  no-repeat;
+    background-position: center;
+    border-radius:  25% 25% / 35% 35%;
+}
