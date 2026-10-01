@@ -1,0 +1,21 @@
+{
+    "STANDINGSTOP43": "STANDINGS",
+    "SOF":            "SOF",
+    "OF":             "of",
+    "LAP":            "Lap",
+    "POS":            "P",
+    "POSCLASS":       "C",
+    "POSQUAL":        "Q",
+    "NUM":            "#",
+    "NAME":           "DRIVER",
+    "BLINK":          "Blk",
+    "RATING":         "RATING",
+    "LAP":            "LAP",
+    "BEHIND":         "BEHIND",
+    "BEST":           "BEST\u2005",
+    "LAST":           "LAST\u2005",
+    "POSDIFF":        "+/-",
+    "PIT":            "PS\u2005\u2005",
+    "RUN":            "RUN",
+    "QUALIFYING":     "Qualifying"
+}
