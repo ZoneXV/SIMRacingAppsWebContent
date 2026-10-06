@@ -1,0 +1,390 @@
+.SIMRacingApps-Widget-FuelTankZ15 {
+    width:            100%;
+    height:           100%;
+    position:         relative;
+    font-size:        142%;
+    background-color: transparent !important;
+}
+
+.SIMRacingApps-Widget-FuelTankZ15-frame {
+    position:       absolute;
+    top:            0%;
+    left:           0%;
+    width:          100%;
+    overflow:       hidden;
+	/* outline:        0.15em solid gold;
+    outline-offset: -0.15em; */
+    z-index:        1000;
+}
+
+.SIMRacingApps-Widget-FuelTankZ15 .SIMRacingApps-Widget-FuelTank-statstable {
+    width:         100%;
+    overflow:      hidden;
+	border-radius: 0.55em;
+	background-image:    linear-gradient(to bottom, rgba(34,34,38,.9) 0%, rgba(27,27,31,.9) 100%) !important;
+	background-repeat:   no-repeat;
+    background-position: center center;
+    background-size:     100%;
+}
+
+/* Title at the very top */
+.SIMRacingApps-Widget-FuelTankZ15-title {
+    font-size:   105.63%;
+	color: #cccccc !important;
+	padding-top:        0.21em !important;
+	padding-left:      0.23em !important;
+	padding-bottom:     0 !important;
+    font-weight: bold;
+    text-align:  left;
+
+    line-height:        100% !important;
+	overflow:      visible !important;
+}
+
+.SIMRacingApps-Widget-FuelTankZ15-title-text {
+    position: relative;
+    top:      0.15em;
+    display:  inline-block;
+}
+
+.SIMRacingApps-Widget-FuelTank-label {
+    text-align:         right;
+    font-size:          100%;
+}
+
+.SIMRacingApps-Widget-FuelTank-header {
+    text-align:         right;
+	padding-right:      1.5% !important;
+	padding-top:        0 !important;
+	padding-bottom:     0.1em !important;
+    font-size:          61.26%;
+	color:              gold !important;
+	text-transform: uppercase;
+    line-height:        .5;
+
+	overflow:      visible !important;
+}
+
+.SIMRacingApps-Widget-FuelTankZ15-header-text {
+    position: relative;
+    top:      -0.24em;
+    display:  inline-block;
+}
+
+/* Move the statstable up to sit just below the title */
+
+
+.SIMRacingApps-Widget-FuelTankZ15 .SIMRacingApps-Widget-FuelTank-statstable td {
+    border:             none !important;
+    padding-top:        1.5%;
+    padding-bottom:     1.02%;
+    padding-left:       0.5%;
+    padding-right:      0.5%;
+    font-weight:        bold;
+    white-space:        nowrap;
+    overflow:           hidden;
+}
+
+/* Fuel level readout — anchored to bottom of content */
+.SIMRacingApps-Widget-FuelTankZ15-fuel td {
+	line-height:        111%;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left:   1.35% !important;
+	text-align:         center;
+    font-size:   128.8632%;
+    font-weight: bold;
+    color:       white;
+    z-index:     1000;
+}
+
+/* Custom padding adjustment ONLY when the bar is HIDDEN (!showBar) */
+.SIMRacingApps-Widget-FuelTankZ15.hide-bar .SIMRacingApps-Widget-FuelTankZ15-fuel td {
+    padding-top: 0.18em !important;    /* Adjust this value up/down to get the exact gap you want */
+	line-height:        110% !important;
+}
+
+.SIMRacingApps-Widget-FuelTankZ15-fuel-content {
+    position: relative;
+    top:      -0.09em;
+	padding-bottom: 0.03em;
+    display:  inline-block;
+}
+
+.SIMRacingApps-Widget-FuelTankZ15-fuel-after {
+   color: gold;
+}
+
+.SIMRacingApps-Widget-FuelTankZ15-fuel-icon {
+    display: inline-block;
+    width: 0.719em;
+    color: gold;
+    vertical-align: middle;
+    position: relative;
+    top: -0.1em; /* nudge to optically center against the text baseline */
+	margin-left: -0.14em;
+	margin-right: 0.0em;
+}
+
+.SIMRacingApps-Widget-FuelTankZ15-fuel-icon svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.SIMRacingApps-Widget-FuelTankZ15-fuel-after-spacer {
+   color: #999999;
+   font-weight: normal;
+}
+
+.SIMRacingApps-Widget-FuelTankZ15-slash {
+    margin-left: -0.08em;
+    margin-right: -0.08em;
+}
+
+.fuel-cols {
+    color:       white;
+}
+
+.SIMRacingApps-Widget-FuelTankZ15-title {
+    box-sizing: border-box;
+}
+
+/* 1. Make all table rows explicitly transparent */
+.fuel-color1,
+.fuel-color2,
+.SIMRacingApps-Widget-FuelTank-spacer,
+.SIMRacingApps-Widget-FuelTank-spacer2,
+.SIMRacingApps-Widget-FuelTank-bar-spacer {
+    background-color: transparent !important;
+}
+
+
+/* 4. Ensure ALL margin cells globally maintain the dark translucent background */
+td.SIMRacingApps-Widget-FuelTank-margin {
+    background-color: rgba(26,26,30,.9) !important;
+}
+
+/* 5. Paint the individual cells of the spacer rows and enforce line-height */
+.SIMRacingApps-Widget-FuelTank-spacer {
+    background-color: transparent !important;
+}
+
+.SIMRacingApps-Widget-FuelTank-spacer td {
+	background-color: transparent !important;
+    font-size: 100% !important;   /* was 21% originally, 32% last pass - dialed back */
+    line-height: 31% !important;
+}
+
+.SIMRacingApps-Widget-FuelTank-spacer2 {
+    background-color: transparent !important;
+}
+
+.SIMRacingApps-Widget-FuelTank-spacer2 td {
+	background-color: transparent !important;
+    font-size: 100% !important;   /* was 42% originally, 55% last pass - dialed back */
+    line-height: 31% !important;
+}
+
+.SIMRacingApps-Widget-FuelTank-equals {
+    line-height:        21%;
+    font-size:          100%;
+	background-color: transparent !important;
+}
+
+.SIMRacingApps-Widget-FuelTank-togo { width: 33.5%; }
+.SIMRacingApps-Widget-FuelTank-sign { width: 2%; }
+
+.SIMRacingApps-Widget-FuelTank-number {
+    text-align:         right;
+    font-size:          100%;
+    width:              25%;
+	padding-right:      1.5% !important;
+}
+
+.SIMRacingApps-Widget-FuelTank-number2 {
+    text-align:         right;
+    font-size:          100%;
+    width:              25%;
+	padding-right:      1.5% !important;	
+}
+
+.SIMRacingApps-Widget-FuelTank-uom {
+    text-align:         left;
+	padding-left:       1.2% !important;
+    font-size:          50%;
+    width:              11%
+}
+
+.SIMRacingApps-Widget-FuelTankZ15-uom-text {
+    position: relative;
+    top:      0.2em;   /* nudges UOM text down to align with the bottom of the value numbers - tune this if it needs more/less */
+    display:  inline-block;
+}
+
+.SIMRacingApps-Widget-FuelTank-margin { 
+    width: 1.5%;  
+}
+
+td.SIMRacingApps-Widget-FuelTank-margin { 
+	background-color: transparent !important;
+}
+
+/* ===== HAIRLINE GROUP DIVIDERS =====
+   Tried the colored accent bars a few different ways (per-group hues,
+   all-gold) and it ended up being visual "extra" that didn't need to be
+   there - dropped that approach.
+
+   This rides on the .spacer/.spacer2 rows you already have between
+   every group, so no HTML changes were needed here - those rows already
+   sit at exactly the right boundaries. The fuel-group-* classes are
+   still in the HTML from the accent-bar attempt; they're inert now but
+   harmless to leave in case you want a hook for something else later.
+
+   Using a background-image gradient rather than border-top:
+   - border-top pins to the very top of the row's box, which is why the
+     first version sat at the top of the gap instead of centered in it.
+     background-position: center centers it in whatever height the row
+     ends up being.
+   - the gradient fades to transparent at both ends instead of using a
+     hard-edged line, so it naturally reads as inset from the frame's
+     edges without needing to touch the margin cells or the HTML at all.
+   - this doesn't need the !important/specificity fight the border-top
+     version needed, because background-image and background-color are
+     independent properties - the earlier background-color rule on this
+     same selector doesn't block it.
+*/
+.SIMRacingApps-Widget-FuelTankZ15 .SIMRacingApps-Widget-FuelTank-statstable .SIMRacingApps-Widget-FuelTank-spacer td,
+.SIMRacingApps-Widget-FuelTankZ15 .SIMRacingApps-Widget-FuelTank-statstable .SIMRacingApps-Widget-FuelTank-spacer2 td {
+    background-image:    linear-gradient(to right, transparent 3.75%, rgba(255,255,255,0.22) 3.75%, rgba(255,255,255,0.22) 50%, rgba(255,255,255,0.22) 96.25%, transparent 96.25%);
+    background-repeat:   no-repeat;
+    background-position: center center;
+    background-size:     100% .1em;
+}
+
+/* Ensure dynamic fuel status alerts override the cell backgrounds */
+
+td.SIMRacingApps-Widget-FuelTank-enoughAddedToFinish {
+    background-color:   rgba(117,250,0,1) !important; /* chartreuse */
+    color:              black !important;
+}
+
+td.SIMRacingApps-Widget-FuelTank-notEnoughToFinish {
+    background-color:   rgba(255,0,0,1) !important; /* red */
+}
+
+td.SIMRacingApps-Widget-FuelTank-enoughToFinish-adding {
+    background-color:   rgba(111,242,0,1) !important; /* chartreuse */
+    color:              black !important;
+}
+
+td.SIMRacingApps-Widget-FuelTank-enoughAddedToFinish-adding {
+    background-color:   rgba(255,242,0,1) !important; /* yellow */
+    color:              black !important;
+}
+
+td.SIMRacingApps-Widget-FuelTank-notEnoughToFinish-adding {
+    background-color:   rgba(235,0,0,1) !important; /* red */
+    color:              white;
+}
+
+/* ===== HORIZONTAL FUEL BAR (E to F) ===== */
+
+.SIMRacingApps-Widget-FuelTankZ15-bar-row td {
+	background-color: transparent !important;
+    line-height: 80%;
+	padding-left:      2% !important;
+    padding-right:     2% !important;
+}
+
+.SIMRacingApps-Widget-FuelTankZ15-bar-wrap {
+    display:     flex;
+    align-items: center;
+	padding-top: .11em;
+	padding-bottom: .15em;
+	padding-left:      1 !important;
+    padding-right:     0 !important;
+}
+
+.SIMRacingApps-Widget-FuelTankZ15-bar-label {
+    color:       #cccccc;
+    font-weight: bold;
+    font-size:   69%;
+	top:      0.065em;
+    flex:        0 0 auto;
+	position: relative;
+	padding-left:      0 !important;
+    padding-right:     0 !important;
+}
+
+.SIMRacingApps-Widget-FuelTankZ15-bar-wrap .SIMRacingApps-Widget-FuelTankZ15-bar-label:first-child {
+    margin-right: 0.33em;
+	padding-left:      0 !important;
+    padding-right:     0 !important;
+}
+
+.SIMRacingApps-Widget-FuelTankZ15-bar-wrap .SIMRacingApps-Widget-FuelTankZ15-bar-label:last-child {
+    margin-left: 0.33em;
+	margin-right: 0.05em;
+	padding-left:      0 !important;
+    padding-right:     0 !important;
+}
+
+/* Track — represents the empty portion of the tank */
+.SIMRacingApps-Widget-FuelTankZ15-bar {
+    position:         relative;
+    flex:             1 1 auto;
+    height:           0.795em;
+    border-radius:    0.3em;
+    background-color: rgb(64,64,64);
+    overflow:         hidden;
+}
+
+/*.SIMRacingApps-Widget-FuelTankZ15-bar::after {
+    content:        "";
+    position:       absolute;
+    top:            0;
+    right:          0;
+    bottom:         0;
+    left:           0;
+    border-radius:  0.3em;
+    box-shadow:     inset 0 0 0 0.06em rgba(255,255,255,.05);
+    pointer-events: none;
+    z-index:        1;
+}
+
+/* Blue fill — current fuel in tank, same color as the original vertical tank */
+.SIMRacingApps-Widget-FuelTankZ15-bar-fill {
+    position:         absolute;
+    top:              0;
+    left:             0;
+    bottom:           0;
+    background-color: #005ed9;
+    z-index:          10;
+}
+
+/* Red segment — fuel to be added at the next stop, sits right after the blue fill */
+.SIMRacingApps-Widget-FuelTankZ15-bar-add {
+    position:         absolute;
+    top:              0;
+    bottom:           0;
+    background-color: gold;
+    z-index:          12;
+}
+
+/* Checkered zone — fuel needed to finish, measured from E.
+   If this extends past the right edge of the blue fill, you need to add fuel to finish. */
+.SIMRacingApps-Widget-FuelTankZ15-bar-needed {
+    position:            absolute;
+    top:                 0;
+    left:                0;
+    bottom:              0;
+    z-index:             14;
+    opacity:             .25;
+    background-image:    linear-gradient(45deg, rgba(0,0,0,.9) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.9) 75%),
+                          linear-gradient(45deg, rgba(0,0,0,.9) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.9) 75%);
+    background-color:    rgba(255,255,255,1);
+    background-size:     0.3211em 0.3211em;
+    background-position: 0 0, 0.16055em 0.16055em;
+    pointer-events:      none;
+}

@@ -1,0 +1,30 @@
+{
+"doc": "JavaScriptDoc/sra-fuel-tank.html",
+"name": [
+            "FuelCalculator-Z15",
+            "FuelCalculator-Z15-NoFuelBar"
+        ],
+"description": [
+            "Displays custom Z15 Fuel Calculator with visual fuel bar",
+            "Displays custom Z15 Fuel Calculator without visual fuel bar"
+        ],
+"description-de": [
+            "Kundenspezifischer Z15-Kraftstoffrechner mit visueller Kraftstoffanzeige",
+            "Kundenspezifischer Z15-Kraftstoffrechner ohne visuelle Kraftstoffanzeige"
+        ],
+"description-es": [
+            "Displays custom Z15 Fuel Calculator with visual fuel bar",
+            "Displays custom Z15 Fuel Calculator without visual fuel bar"
+        ],
+"url": "apps/WidgetLoader?widget=FuelTankZ15&",
+"icon": [
+            "widgets/FuelTankZ15/icon.png",
+            "widgets/FuelTankZ15/icon-nobar.png"
+        ],
+"width": 322,
+"height": 435,
+"args": [
+            "SHOWBAR=true",
+            "SHOWBAR=false"
+        ]
+}

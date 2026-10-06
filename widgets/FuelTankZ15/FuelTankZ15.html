@@ -1,0 +1,233 @@
+<div class                    = "SIMRacingApps-Widget-FuelTankZ15"
+     data-ng-class            = "{ 'hide-bar': !showBar }"
+     data-ng-style            = "{ height: height+'px' }">
+    <div class="SIMRacingApps-Widget-FuelTankZ15-frame">
+	<table class              = "SIMRacingApps-Widget-FuelTank-statstable"
+           data-ng-if         = "showTable && (showToGoLaps || showInTankLaps || showPerTankLaps || showToFinish || showInTank || showNeeded || showAdding || showPitStops)">
+        <colgroup>
+            <col class = "SIMRacingApps-Widget-FuelTank-margin" />
+            <col class = "SIMRacingApps-Widget-FuelTank-togo" />
+            <col class = "SIMRacingApps-Widget-FuelTank-sign" />
+            <col class = "SIMRacingApps-Widget-FuelTank-number" />
+			<col class = "SIMRacingApps-Widget-FuelTank-number2" />
+            <col class = "SIMRacingApps-Widget-FuelTank-uom" />
+            <col class = "SIMRacingApps-Widget-FuelTank-margin" />
+        </colgroup>
+        <tbody>
+		        <tr>
+	<td class="SIMRacingApps-Widget-FuelTank-margin"></td>			
+    <td class="SIMRacingApps-Widget-FuelTankZ15-title SIMRacingAppsLabel" colspan="5">
+        <span class="SIMRacingApps-Widget-FuelTankZ15-title-text"
+              data-ng-bind="translations.FUELTANK"></span>
+    </td>
+	<td class="SIMRacingApps-Widget-FuelTank-margin"></td>
+</tr>
+			           
+		        <tr class="fuel-cols">
+                <td class             = "SIMRacingApps-Widget-FuelTank-header SIMRacingApps-Widget-FuelTank-margin"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-header"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-header"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-header SIMRacingAppsLabelAlt">
+                    <span class="SIMRacingApps-Widget-FuelTankZ15-header-text"
+					      data-ng-bind      = "lapsToAverage == 0 ? translations.WORST : (lapsToAverage + ' ' + translations.LAPS)"></span>
+                </td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-header SIMRacingAppsLabelAlt">
+                    <span class="SIMRacingApps-Widget-FuelTankZ15-header-text"
+					      data-ng-bind      = "altLapsToAverage == 0 ? translations.WORST : (altLapsToAverage + ' ' + translations.LAPS)"></span>
+                </td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-header"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-header SIMRacingApps-Widget-FuelTank-margin"></td>
+            </tr>
+            <tr class="fuel-color1 fuel-group-laps" data-ng-if            = "showToGoLaps">
+                <td class             = "SIMRacingApps-Widget-FuelTank-margin"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-label SIMRacingAppsLabel"
+                    data-ng-bind      = "translations.TOGO"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-sign"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-number"
+                    data-ng-bind      = "lapsToGo | sraNumber:1:true"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-number2"
+                    data-ng-if        = "showAltLapsToAverage"
+                    data-ng-bind      = "lapsToGo | sraNumber:1:true"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-uom"><span class="SIMRacingApps-Widget-FuelTankZ15-uom-text" data-ng-bind="translations.LAPS"></span></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-margin"></td>
+            </tr>
+            <tr class="fuel-color2 fuel-group-laps" data-ng-if            = "showInTankLaps">
+                <td class             = "SIMRacingApps-Widget-FuelTank-margin"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-label SIMRacingAppsLabel"
+                    data-ng-bind      = "translations.INTANK"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-sign"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-number"
+                    data-ng-class     = "classIsEnough"
+                    data-ng-bind      = "lapsInTank | sraNumber:1:true"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-number2"
+                    data-ng-if        = "showAltLapsToAverage"
+                    data-ng-class     = "classIsAltEnough"
+                    data-ng-bind      = "altLapsInTank | sraNumber:1:true"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-uom"><span class="SIMRacingApps-Widget-FuelTankZ15-uom-text" data-ng-bind="translations.LAPS"></span></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-margin"></td>
+            </tr>
+            <tr class="fuel-color1 fuel-group-laps" data-ng-if            = "showPerTankLaps">
+                <td class             = "SIMRacingApps-Widget-FuelTank-margin"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-label SIMRacingAppsLabel"
+                    data-ng-bind      = "translations.PERTANK"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-sign"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-number"
+                    data-ng-bind      = "lapsPerTank | sraNumber:1:true"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-number2"
+                    data-ng-if        = "showAltLapsToAverage"
+                    data-ng-bind      = "altLapsPerTank | sraNumber:1:true"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-uom"><span class="SIMRacingApps-Widget-FuelTankZ15-uom-text" data-ng-bind="translations.LAPS"></span></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-margin"></td>
+            </tr>
+            <tr class                 = "SIMRacingApps-Widget-FuelTank-spacer" data-ng-if="showBar">
+                <td colspan="7">&nbsp;</td>
+			<tr class                 = "SIMRacingApps-Widget-FuelTank-spacer2" data-ng-hide="showBar">
+                <td colspan="7">&nbsp;</td>	
+            </tr>					
+            <tr class="fuel-color2 fuel-group-volume" data-ng-if            = "showToFinish">
+                <td class             = "SIMRacingApps-Widget-FuelTank-margin"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-label SIMRacingAppsLabel"
+                    data-ng-bind      = "translations.TOFINISH"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-sign"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-number"
+                    data-ng-bind      = "fuelLevelToFinish | sraNumber:2:true"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-number2"
+                    data-ng-if        = "showAltLapsToAverage"
+                    data-ng-bind      = "altFuelLevelToFinish | sraNumber:2:true"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-uom"><span class="SIMRacingApps-Widget-FuelTankZ15-uom-text" data-ng-bind="data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent.UOMAbbr"></span></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-margin"></td>
+            </tr>
+            <tr class="fuel-color1 fuel-group-volume" data-ng-if            = "showInTank">
+                <td class             = "SIMRacingApps-Widget-FuelTank-margin"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-label SIMRacingAppsLabel"
+                    data-ng-bind      = "translations.INTANK"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-sign"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-number"
+                    data-ng-bind      = "data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent.Value | sraNumber:2"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-number2"
+                    data-ng-if        = "showAltLapsToAverage"
+                    data-ng-bind      = "data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent.Value | sraNumber:2"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-uom"><span class="SIMRacingApps-Widget-FuelTankZ15-uom-text" data-ng-bind="data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent.UOMAbbr"></span></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-margin"></td>
+            </tr>
+            <tr class                 = "SIMRacingApps-Widget-FuelTank-spacer" data-ng-if="showBar">
+                <td colspan="7">&nbsp;</td>
+			<tr class                 = "SIMRacingApps-Widget-FuelTank-spacer2" data-ng-hide="showBar">
+                <td colspan="7">&nbsp;</td>	
+            </tr>	
+            <tr class="fuel-color2 fuel-group-needed" data-ng-if            = "showNeeded">
+                <td class             = "SIMRacingApps-Widget-FuelTank-margin"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-label SIMRacingAppsLabel"
+                    data-ng-bind      = "translations.NEEDED"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-sign"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-number"
+                    data-ng-class     = "classIsEnoughAdding"
+                    data-ng-bind      = "fuelLevelNeeded > 0.0 ? (fuelLevelNeeded | sraNumber:2:true) : (fuelLevelSurplus === '' ? '' : (-fuelLevelSurplus | sraNumber:2:true))"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-number2"
+                    data-ng-if        = "showAltLapsToAverage"
+                    data-ng-class     = "classIsAltEnoughAdding"
+                    data-ng-bind      = "altFuelLevelNeeded > 0.0 ? (altFuelLevelNeeded | sraNumber:2:true) : (altFuelLevelSurplus === '' ? '' : (-altFuelLevelSurplus | sraNumber:2:true))"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-uom"><span class="SIMRacingApps-Widget-FuelTankZ15-uom-text" data-ng-bind="data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent.UOMAbbr"></span></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-margin"></td>
+            </tr>
+            <tr class="fuel-color1 fuel-group-needed" data-ng-if            = "showAdding">
+                <td class             = "SIMRacingApps-Widget-FuelTank-margin"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-label SIMRacingAppsLabel"
+                    data-ng-bind      = "translations.ADDING"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-sign"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-number"
+                    data-ng-class     = "classIsEnoughAdding"
+                    data-ng-bind      = "fuelLevelAdding | sraNumber:2:true"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-number2"
+                    data-ng-class     = "classIsAltEnoughAdding"
+                    data-ng-if        = "showAltLapsToAverage"
+                    data-ng-bind      = "fuelLevelAdding | sraNumber:2:true"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-uom"><span class="SIMRacingApps-Widget-FuelTankZ15-uom-text" data-ng-bind="data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent.UOMAbbr"></span></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-margin"></td>
+            </tr>
+            <tr class                 = "SIMRacingApps-Widget-FuelTank-spacer" data-ng-if="showBar">
+                <td colspan="7">&nbsp;</td>
+			<tr class                 = "SIMRacingApps-Widget-FuelTank-spacer2" data-ng-hide="showBar">
+                <td colspan="7">&nbsp;</td>	
+            </tr>	
+            <tr class="fuel-color2 fuel-group-pit" data-ng-if            = "showStartFinish">
+                <td class             = "SIMRacingApps-Widget-FuelTank-margin"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-label SIMRacingAppsLabel">At S/F</td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-sign"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-number"
+                    data-ng-class     = "{ 'SIMRacingApps-Widget-FuelTank-notEnoughToFinish': lapsAtStartFinish !== '' && lapsAtStartFinish < 2.1, 'SIMRacingApps-Widget-FuelTank-enoughAddedToFinish-adding': lapsAtStartFinish !== '' && lapsAtStartFinish >= 2.1 && lapsAtStartFinish < 3.1 }"
+                    data-ng-bind      = "lapsAtStartFinish | sraNumber:1:true"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-number2"
+                    data-ng-if        = "showAltLapsToAverage"
+                    data-ng-class     = "{ 'SIMRacingApps-Widget-FuelTank-notEnoughToFinish': altLapsAtStartFinish !== '' && altLapsAtStartFinish < 2.1, 'SIMRacingApps-Widget-FuelTank-enoughAddedToFinish-adding': altLapsAtStartFinish !== '' && altLapsAtStartFinish >= 2.1 && altLapsAtStartFinish < 3.1 }"
+                    data-ng-bind      = "altLapsAtStartFinish | sraNumber:1:true"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-uom"><span class="SIMRacingApps-Widget-FuelTankZ15-uom-text" data-ng-bind="translations.LAPS"></span></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-margin"></td>
+            </tr>
+            <tr class="fuel-color1 fuel-group-pit" data-ng-if            = "showPitStops">
+                <td class             = "SIMRacingApps-Widget-FuelTank-margin"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-label SIMRacingAppsLabel"
+                    data-ng-bind      = "translations.PITSTOPS"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-sign"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-number"
+                    data-ng-bind      = "data.Car.REFERENCE.LapsToGo.Value >= 9999 ? '' : (data.Car.REFERENCE.PitStopsRemaining[lapsToAverage].Value | sraNumber:0:true)"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-number2"
+                    data-ng-if        = "showAltLapsToAverage"
+                    data-ng-bind      = "data.Car.REFERENCE.LapsToGo.Value >= 9999 ? '' : (data.Car.REFERENCE.PitStopsRemaining[altLapsToAverage].Value | sraNumber:0:true)"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-uom"></td>
+                <td class             = "SIMRacingApps-Widget-FuelTank-margin"></td>
+            </tr>
+            <tr class                 = "SIMRacingApps-Widget-FuelTank-spacer2" data-ng-hide="showBar">
+                <td colspan="7">&nbsp;</td>			
+            <tr class="SIMRacingApps-Widget-FuelTankZ15-bar-row"
+			    data-ng-if="showBar">
+                <td class="SIMRacingApps-Widget-FuelTank-margin"></td>
+                <td colspan="5">
+                    <div class="SIMRacingApps-Widget-FuelTankZ15-bar-wrap">
+                        <span class="SIMRacingApps-Widget-FuelTankZ15-bar-label">E</span>
+                        <div class="SIMRacingApps-Widget-FuelTankZ15-bar">
+                            <div class="SIMRacingApps-Widget-FuelTankZ15-bar-fill"
+                                 data-ng-style="{ width: fuelLevelPercentage + '%' }"></div>
+                            <div class="SIMRacingApps-Widget-FuelTankZ15-bar-add"
+                                 data-ng-if="data.Car.REFERENCE.Gauge.FuelLevel.ChangeFlag.Value"
+                                 data-ng-style="{ left: fuelLevelPercentage + '%', width: fuelLevelNextPercentage + '%' }"></div>
+                            <div class="SIMRacingApps-Widget-FuelTankZ15-bar-needed"
+                                 data-ng-style="{ width: (fuelLevelToFinishPercentage > 100.0 ? 100.0 : fuelLevelToFinishPercentage) + '%' }"></div>
+                        </div>
+                        <span class="SIMRacingApps-Widget-FuelTankZ15-bar-label">F</span>
+                    </div>
+                </td>
+                <td class="SIMRacingApps-Widget-FuelTank-margin"></td>
+            </tr>
+						<tr class = "SIMRacingApps-Widget-FuelTankZ15-fuel">
+    <td colspan="7">
+        <span class="SIMRacingApps-Widget-FuelTankZ15-fuel-content">
+            <span class        = "SIMRacingApps-Widget-FuelTankZ15-fuel-after"
+                  data-ng-if   = "showAfterStop"
+                  data-ng-bind = "fuelLevelAfterStop | sraNumber:1"
+            ></span>
+            <span class="SIMRacingApps-Widget-FuelTankZ15-fuel-icon"
+                  data-ng-if="showAfterStop">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-hidden="true">
+                    <path fill="currentColor" d="
+                        M71.3,5 H28.8 L5,28.8 V71.3 L28.8,95 H71.4 L95.2,71.3 V28.8 L71.3,5 Z
+                        M67.2,85.5 H32.7 L14.5,67.3 V32.6 L32.6,14.5 H67.2 L85.4,32.7 V67.3 L67.2,85.5 Z
+                        M61.7,26.9 C59.9,26.4 56.2,26.2 50.4,26.2 H34.8 V73.8 H45.2 V56.3 H50.8
+                        C55,56.3 58.4,56 60.6,55.6 C62.3,55.2 64,54.4 65.6,53.4 C67.2,52.2 68.7,50.6 69.7,48.6
+                        C70.8,46.6 71.3,44.1 71.3,41.1 C71.3,37.6 70.3,34.2 68.5,31.7 C66.6,29.3 64.3,27.6 61.5,26.9 Z
+                        M59.9,44.5 C59.3,45.4 58.4,46.1 57.2,46.6 C56,47 53.6,47.3 50,47.3 H45.4 V35.2 H49.4
+                        C52.7,35.2 55,35.2 56.1,35.5 C57.5,35.8 58.6,36.4 59.6,37.4 C60.5,38.4 61,39.6 61,41.3
+                        C61,42.5 60.6,43.6 59.9,44.5 Z" />
+                </svg>
+            </span>
+            <span data-ng-bind="data.Car.REFERENCE.Gauge.FuelLevel.ValueCurrent.Value | sraNumber:1"></span>
+            <span class="SIMRacingApps-Widget-FuelTankZ15-slash">/</span>
+            <span data-ng-bind="(data.Car.REFERENCE.Gauge.FuelLevel.CapacityMaximum.Value | sraNumber:1) + '\u2006' + data.Car.REFERENCE.Gauge.FuelLevel.CapacityMaximum.UOMAbbr"></span>
+        </span>
+    </td>
+</tr>
+
+        </tbody>
+    </table>
+	</div>
+</div>

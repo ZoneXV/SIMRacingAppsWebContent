@@ -1,0 +1,12 @@
+{
+    "FUELTANK"  : "FUEL",
+    "TOGO"      : "To Go",
+    "INTANK"    : "In Tank",
+    "PERTANK"   : "Per Tank",
+    "TOFINISH"  : "To Finish",
+    "NEEDED"    : "Needed",
+    "ADDING"    : "Adding",
+    "PITSTOPS"  : "Pit Stops",
+    "WORST"     : "Worst",
+    "LAPS"      : "Laps"
+}

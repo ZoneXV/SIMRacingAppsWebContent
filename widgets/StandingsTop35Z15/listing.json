@@ -1,0 +1,12 @@
+{
+"doc": "JavaScriptDoc/sra-standings-top-35.html",
+"name": "StandingsTop35-Z15",
+"description": "Top 35 Positions (No Multi-Class Support), Pit Time, Run Length, Lap Times",
+"description-de": "Top 35 Positionen, BoxenStop-Zeit, L\u00e4nge des Stints, Rundenzeiten",
+"description-es": "Top 35 Positions, Pit Time, Run Length, Lap Times",
+"url": "apps/WidgetLoader?widget=StandingsTop35Z15&",
+"icon": "widgets/StandingsTop35Z15/icon.png",
+"width": 800,
+"height": 863,
+"args": ""
+}

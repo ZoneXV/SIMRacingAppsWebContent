@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+
+/* iRacing license colors
+
+   WC  -> rgb(0, 0, 0)
+   A   -> rgb(1, 83, 219)
+   B   -> rgb(0, 199, 2)
+   C   -> rgb(254, 236, 4)
+   D   -> rgb(252, 138, 39)
+   R   -> rgb(252, 7, 6)
+   AI  -> rgb(136, 0, 160)
+
+   These are remapped below to a palette that more closely matches
+   the in-game iRacing license badges.
+*/
+
+.SIMRacingApps-Widget-StandingsTop60 {
+    line-height: 170%;
+	overflow:hidden;
+    /* background: dimgray; */
+    color: white;
+    padding: 0;
+}
+
+.SIMRacingApps-Widget-StandingsTop60-HelmetIcon {
+    display: inline-block;
+    width: 0.915em;
+	/* color: #cccccc; */
+    vertical-align: middle;
+    position: relative;
+    top: -0.08em;
+}
+
+.SIMRacingApps-Widget-StandingsTop60-Flags {
+    display: inline-block;
+    width: 1.01em;
+	/* color: #cccccc; */
+    vertical-align: middle;
+    position: relative;
+	top: -0.06em;
+}
+
+.SIMRacingApps-Widget-StandingsTop60-HelmetIcon svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.SIMRacingApps-Widget-StandingsTop60-Flags svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.SIMRacingApps-Widget-StandingsTop60-Separator {
+    color: #808080 !important;
+	justify-content: center;
+    align-items: center;
+    font-weight: bold !important;
+	font-size: 100%;
+}
+
+.SIMRacingApps-Widget-StandingsTop60-CarCount {
+	margin-left: -0.05em !important;
+}
+
+.SIMRacingApps-Widget-StandingsTop60-ToGo {
+    font-weight: normal;
+
+}
+
+.SIMRacingApps-Widget-StandingsTop60-TitleHeader {
+    background-color: rgba(0,0,0,1);
+	
+}
+
+.SIMRacingApps-Widget-StandingsTop60-Title {
+    font-size: 100%;
+    color: gold;
+    padding-left: 1%;
+    white-space: nowrap;
+	padding-top: 0.5%;
+    padding-bottom: 0.5%;
+	overflow:visible !important;
+}
+
+.SIMRacingApps-Widget-StandingsTop60-SessionName {
+    text-transform: uppercase;
+	font-weight: bold;
+	color: #cccccc;
+}
+
+.SIMRacingApps-Widget-StandingsTop60-Paren {
+    display: inline-block;
+    position: relative;
+    top: -0.06em; /* Arial's parentheses are drawn lower/taller than lining digits; nudge to re-center */
+}
+
+.SIMRacingApps-Widget-StandingsTop60-SOF {
+    font-size: 100%;
+    color: gold;
+	padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    padding-right: 1%;
+    white-space: nowrap;
+    text-align: right;
+}
+
+.SIMRacingApps-Widget-StandingsTop60-GridHeader {
+    background-color: black;
+    color: white;
+	line-height: 120%;
+	font-size: 100% !important;
+}
+
+.SIMRacingApps-Widget-StandingsTop60-RatingHeader {
+	font-size: 100% !important;
+	font-weight: normal !important;
+}
+
+
+.SIMRacingApps-Widget-StandingsTop60-GridBody {
+    font-size: 74%;
+    line-height: 100%; /* this controls the height of the entire table at the given font and padding*/
+}
+
+/* ===== CARD/BADGE VERSION (active) ===== */
+.SIMRacingApps-Widget-StandingsTop60-GridRow
+.SIMRacingApps-Widget-StandingsTop60-POS {
+    position: relative;
+    color: white;
+    font-weight: bold;
+    font-size: 100%;
+    font-family: "Rajdhani";
+    padding: 0;
+}
+.SIMRacingApps-Widget-StandingsTop60-POS-badge {
+    position: absolute;
+    top:    1px;
+    right:  0;
+    bottom: 1px;
+    left:   0;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-bottom-right-radius: 0.3em;
+    padding-top: 0.05em;
+}
+.SIMRacingAppsGridRow-even .SIMRacingApps-Widget-StandingsTop60-POS-badge { background: #414141; }
+.SIMRacingAppsGridRow-odd  .SIMRacingApps-Widget-StandingsTop60-POS-badge { background: #414141; } */
+
+/* ===== FLAT VERSION (commented out — swap in by flipping the comments) =====
+.SIMRacingApps-Widget-StandingsTop60-GridRow
+.SIMRacingApps-Widget-StandingsTop60-POS {
+    color: white;
+    font-weight: bold;
+    font-size: 100%;
+    font-family: "Rajdhani";
+    padding-left: 0%;
+	padding-top: 0.05em;
+}
+.SIMRacingAppsGridRow-even .SIMRacingApps-Widget-StandingsTop60-POS { background: #414141; }
+.SIMRacingAppsGridRow-odd  .SIMRacingApps-Widget-StandingsTop60-POS { background: #4e4e4e; }
+*/
+
+.SIMRacingApps-Widget-StandingsTop60-MfrLogoSpacer {
+    width: 0.5%;
+}
+
+.SIMRacingApps-Widget-StandingsTop60-GridRowBackground-talking {
+    background-image: linear-gradient(90deg,rgba(56, 40, 8, .5) 0%, rgba(56, 40, 8, 1) 15%, rgba(153, 110, 23, 1) 100%) !important;
+}
+
+.SIMRacingApps-Widget-StandingsTop60-GridRowBackground-reference {
+    background-image: linear-gradient(90deg,rgba(45, 45, 45, .5) 0%, rgba(45, 45, 45, 1) 15%, rgba(95, 95, 95, 1) 100%) !important;
+}
+
+.SIMRacingApps-Widget-StandingsTop60-GridRowForeground {
+}
+
+.SIMRacingApps-Widget-StandingsTop60-POS {
+    width: 3.1842%;
+	padding-left: 0.3%;
+    text-align: center;
+}
+
+.SIMRacingApps-Widget-StandingsTop60-CarNumber {
+    width: 4.7368%;
+	padding-left: 0.5%;
+	text-align: center;
+}
+
+.SIMRacingApps-Widget-StandingsTop60-MfrLogo {
+    background-repeat:   no-repeat;
+    background-size:     contain;
+    background-position: center;
+    width:               3.6842%;
+}
+
+.SIMRacingApps-Widget-StandingsTop60-CarDriverName {
+    text-align: left;
+    padding-left: 0.7%;
+	padding-top: 0.064%;
+	padding-bottom: 0.064%;
+    white-space: nowrap;
+    overflow: hidden;
+    border-color: transparent;
+    border-width: thin;
+    border-style: inset;
+    width: 28.921%;	
+}
+
+.SIMRacingApps-Widget-StandingsTop60-Rating {
+    white-space: nowrap;
+    width: 13.1316%;
+    font-size: 70%;
+	text-shadow: 0 0 0.2em rgba(0,0,0,0.5);
+	font-weight: bold;
+}
+
+.SIMRacingApps-Widget-StandingsTop60-Rating > span {
+    border: 0.2em solid;
+    border-radius: 0.8em;
+    padding: 0.25em 0.9em 0.15em 0.9em;
+    display: inline-block;
+    line-height: 1;
+    box-sizing: border-box;
+    min-width: 8.2em;
+    text-align: center;
+	box-shadow: inset 0 1.15em 1.0em rgba(0,0,0,0.25), inset 0 0 5.0em rgba(0,0,0,0.55);
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.SIMRacingApps-Widget-StandingsTop60-Rating,
+.SIMRacingApps-Widget-StandingsTop60-Rating th,
+.SIMRacingApps-Widget-StandingsTop60-Rating td {
+    text-align: center !important;
+}
+
+/* WC license - gray */
+.SIMRacingApps-Widget-StandingsTop60-Rating > span.sra-license-badge[style*="rgb(0, 0, 0)"] {
+    padding: 0.25em 0.6em 0.15em 0.6em;
+	background-color: rgb(140, 140, 140) !important;
+    border-color: rgb(140, 140, 140) !important;
+	color: rgb(190, 190, 190) !important;
+}
+
+/* A license - blue */
+.SIMRacingApps-Widget-StandingsTop60-Rating > span.sra-license-badge[style*="rgb(1, 83, 219)"] {
+    background-color: rgb(0, 110, 255) !important;
+    border-color: rgb(0, 110, 255) !important;
+	color: rgb(120, 178, 255) !important;
+}
+
+/* B license - green */
+.SIMRacingApps-Widget-StandingsTop60-Rating > span.sra-license-badge[style*="rgb(0, 199, 2)"] {
+    background-color: rgb(51, 204, 0) !important;
+    border-color: rgb(51, 204, 0) !important;
+	color: rgb(133, 224, 102) !important;
+}
+
+/* C license - yellow */
+.SIMRacingApps-Widget-StandingsTop60-Rating > span.sra-license-badge[style*="rgb(254, 236, 4)"] {
+    background-color: rgb(255, 204, 0) !important;
+    border-color: rgb(255, 204, 0) !important;
+	color: rgb(255, 224, 102) !important;
+}
+
+/* D license - orange */
+.SIMRacingApps-Widget-StandingsTop60-Rating > span.sra-license-badge[style*="rgb(252, 138, 39)"] {
+    background-color: rgb(255, 102, 0) !important;
+    border-color: rgb(255, 102, 0) !important;
+	color: rgb(255, 163, 102) !important;
+}
+
+/* Rookie license - red */
+.SIMRacingApps-Widget-StandingsTop60-Rating > span.sra-license-badge[style*="rgb(252, 7, 6)"] {
+    background-color: rgb(225, 37, 27) !important;
+    border-color: rgb(225, 37, 27) !important;
+	color: rgb(237, 124, 118) !important;
+}
+
+/* AI - purple */
+.SIMRacingApps-Widget-StandingsTop60-Rating > span.sra-license-badge[style*="rgb(136, 0, 160)"] {
+    background-color: rgb(188, 20, 218) !important;
+    border-color: rgb(188, 20, 218) !important;
+	color: rgb(215, 114, 233) !important;
+}
+
+/* No Data - gray */
+.SIMRacingApps-Widget-StandingsTop60-Rating > span.sra-license-badge[style*="rgb(255, 0, 0)"] {
+    padding: 0.25em 0.6em 0.15em 0.6em;
+	background-color: rgb(140, 140, 140) !important;
+    border-color: rgb(140, 140, 140) !important;
+	color: rgb(190, 190, 190) !important;
+}
+
+.SIMRacingApps-Widget-StandingsTop60-Lap {
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+}
+
+.SIMRacingApps-Widget-StandingsTop60-Run {
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    width: 6.7632%;
+}
+
+.SIMRacingApps-Widget-StandingsTop60-Pit {
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: right;
+	padding-right: 0%;
+    width: 7.8947%;
+}
+
+
+.SIMRacingApps-Widget-StandingsTop60-Behind {
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: right;
+	padding-right: .5%;
+    width: 11.0789%;
+}
+
+.SIMRacingApps-Widget-StandingsTop60-Best {
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: right;
+	padding-right: 0.75%;
+    width: 10.0526%;
+}
+
+.SIMRacingApps-Widget-StandingsTop60-Last {
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: right;
+	padding-right: 1%;
+    width: 10.0526%;
+}
+
+
+.SIMRacingApps-Widget-StandingsTop60-Best-Y {
+    color: magenta;
+}
+
+.SIMRacingApps-Widget-StandingsTop60-Fastest-Y {
+    color: magenta;
+}
+
+.SIMRacingApps-Widget-StandingsTop60 .SIMRacingAppsCarStatusClassBackground-ONTRACK-REFERENCE,
+.SIMRacingApps-Widget-StandingsTop60 .SIMRacingAppsCarStatusClassBackground-OFFTRACK-REFERENCE,
+.SIMRacingApps-Widget-StandingsTop60 .SIMRacingAppsCarStatusClassBackground-APPROACHINGPITS-REFERENCE,
+.SIMRacingApps-Widget-StandingsTop60 .SIMRacingAppsCarStatusClassBackground-ONPITROAD-REFERENCE,
+.SIMRacingApps-Widget-StandingsTop60 .SIMRacingAppsCarStatusClassBackground-ENTERINGPITSTALL-REFERENCE,
+.SIMRacingApps-Widget-StandingsTop60 .SIMRacingAppsCarStatusClassBackground-INPITSTALL-REFERENCE,
+.SIMRacingApps-Widget-StandingsTop60 .SIMRacingAppsCarStatusClassBackground-EXITINGPITSTALL-REFERENCE,
+.SIMRacingApps-Widget-StandingsTop60 .SIMRacingAppsCarStatusClassBackground-LEAVINGPITS-REFERENCE,
+.SIMRacingApps-Widget-StandingsTop60 .SIMRacingAppsCarStatusClassBackground-INVALID-REFERENCE,
+.SIMRacingApps-Widget-StandingsTop60 .SIMRacingAppsCarStatusClassBackground-INGARAGE-REFERENCE,
+.SIMRacingApps-Widget-StandingsTop60 .SIMRacingAppsCarStatusClassBackground-TOWING-REFERENCE {
+    background-color: inherit !important;
+    color:            inherit !important;
+}
+ 
+.SIMRacingApps-Widget-StandingsTop60 .SIMRacingAppsCarStatusClassForeground-ONTRACK-REFERENCE,
+.SIMRacingApps-Widget-StandingsTop60 .SIMRacingAppsCarStatusClassForeground-OFFTRACK-REFERENCE,
+.SIMRacingApps-Widget-StandingsTop60 .SIMRacingAppsCarStatusClassForeground-APPROACHINGPITS-REFERENCE,
+.SIMRacingApps-Widget-StandingsTop60 .SIMRacingAppsCarStatusClassForeground-ONPITROAD-REFERENCE,
+.SIMRacingApps-Widget-StandingsTop60 .SIMRacingAppsCarStatusClassForeground-ENTERINGPITSTALL-REFERENCE,
+.SIMRacingApps-Widget-StandingsTop60 .SIMRacingAppsCarStatusClassForeground-INPITSTALL-REFERENCE,
+.SIMRacingApps-Widget-StandingsTop60 .SIMRacingAppsCarStatusClassForeground-EXITINGPITSTALL-REFERENCE,
+.SIMRacingApps-Widget-StandingsTop60 .SIMRacingAppsCarStatusClassForeground-LEAVINGPITS-REFERENCE,
+.SIMRacingApps-Widget-StandingsTop60 .SIMRacingAppsCarStatusClassForeground-INVALID-REFERENCE,
+.SIMRacingApps-Widget-StandingsTop60 .SIMRacingAppsCarStatusClassForeground-INGARAGE-REFERENCE,
+.SIMRacingApps-Widget-StandingsTop60 .SIMRacingAppsCarStatusClassForeground-TOWING-REFERENCE {
+    color: inherit !important;
+}
